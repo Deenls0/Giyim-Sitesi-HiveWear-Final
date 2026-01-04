@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+
+	 
+
+
+
+
+
+	<title>bıdı bıdı yapma</title>
+
+	<link rel="canonical" href="https://codepen.io/LukyVj/pen/oNPJrdy">
+
+
+	<link rel='stylesheet' href='https://codepen.io/LukyVj/pen/JjavKEX/ca2344eb8511404c494dd71d1ca8f1a7.css'>
+
+	<style>
+		@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap");
+
+		@font-face {
+			font-family: "Mona Sans";
+			src: url("https://assets.codepen.io/64/Mona-Sans.woff2") format("woff2 supports variations"), url("https://assets.codepen.io/64/Mona-Sans.woff2") format("woff2-variations");
+			font-weight: 100 1000;
+		}
+
+		:root {
+			--icon-scale: 0;
+			--icon-rotation: 0;
+			--icon-opacity: 0;
+			--color-pale-pink: hsl(272 16% 56.99%);
+			--color-dark-purple: hsl(269.35 100% 21%);
+			--color-light-purple: hsl(269.99 100% 40%);
+			--color-bubblegum-pink: hsl(300deg 97% 68%);
+		}
+
+		@supports (color: color(display-p3 0 0 0)) {
+			:root {
+				--color-pale-pink: color(display-p3 0.56 0.5 0.63);
+				--color-dark-purple: color(display-p3 0.19 0.01 0.41);
+				--color-light-purple: color(display-p3 0.37 0.01 0.78);
+				--color-bubblegum-pink: color(display-p3 0.94 0.36 1);
+			}
+		}
+
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			outline: calc(var(--debug) * 1px) dotted hsl(calc(var(--debug) * 10 * 1deg), 60%, 60%);
+		}
+
+		html,
+		body,
+		main {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: #f5ebff;
+			font-family: "Mona Sans", sans-serif;
+		}
+
+		main {
+			display: grid;
+			place-items: center;
+			--color-mix: color-mix(in lch,
+					var(--color-bubblegum-pink) 60%,
+					var(--color-dark-purple));
+		}
+
+		main button {
+			all: unset;
+			cursor: pointer;
+			font-size: 3em;
+			font-weight: 1000;
+			color: white;
+			position: relative;
+			transition: transform 0.2s ease;
+		}
+
+		main button:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom right, var(--color-pale-pink), var(--color-pale-pink));
+			transform: scale(0.9);
+			outline: 0px solid var(--color-light-purple);
+			border-radius: 100000px;
+			transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		main button span:nth-child(2) {
+			position: relative;
+			padding: 0.5em 1.2em;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			display: block;
+			border-radius: 100000px;
+			transition: transform 0.2s ease;
+		}
+
+		main button span:nth-child(2):before,
+		main button span:nth-child(2):after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: var(--icon-opacity);
+			transform: scale(var(--icon-scale)) rotate(calc(var(--icon-rotation) * -1deg));
+			transition: transform 0.2s ease, opacity 0.2s ease, --icon-rotation 0.4s cubic-bezier(0.02, 1.02, 0.67, 1.06);
+			pointer-events: none;
+			z-index: -1;
+		}
+
+		main button span:nth-child(2):before {
+			width: 2.1em;
+			top: -0.8em;
+			left: -0.8em;
+			background: url(https://assets.codepen.io/64/heart+%286%29+%281%29.png) no-repeat center center/contain;
+			z-index: -1;
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+		}
+
+		main button span:nth-child(2):after {
+			width: 1.2em;
+			top: 1em;
+			left: 0.5em;
+			background: url(https://assets.codepen.io/64/heart+%285%29+%281%29.png) no-repeat center center/contain;
+			filter: blur(2px) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+		}
+
+		main button span:nth-child(1) {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: transparent;
+		}
+
+		main button span:nth-child(1):before,
+		main button span:nth-child(1):after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			z-index: 5;
+			transform: scale(var(--icon-scale)) rotate(calc(var(--icon-rotation) * -1deg));
+			transition: transform 0.2s ease, opacity 0.2s ease, --icon-rotation 0.4s cubic-bezier(0.02, 1.02, 0.67, 1.06);
+			pointer-events: none;
+		}
+
+		main button span:nth-child(1):before {
+			width: 1.75em;
+			top: -1em;
+			right: 0.5em;
+			background: url(https://assets.codepen.io/64/heart+%283%29+%281%29.png) no-repeat center center/contain;
+			filter: blur(1px) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+		}
+
+		main button span:nth-child(1):after {
+			width: 2em;
+			top: 1em;
+			right: -0.5em;
+			background: url(https://assets.codepen.io/64/heart+%284%29+%281%29.png) no-repeat center center/contain;
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) saturate(150%);
+		}
+
+		main button:hover {
+			--icon-scale: 1;
+			--icon-rotation: 0;
+			--icon-opacity: 1;
+		}
+
+		main button:hover:before {
+			transform: scale(1.05);
+			background: linear-gradient(to bottom right, var(--color-dark-purple), var(--color-light-purple));
+			box-shadow: 0 4px 22px -8px var(--color-mix);
+		}
+
+		main button:hover>span:nth-child(2) {
+			transform: scale(0.95);
+		}
+
+		main button:hover:active {
+			--icon-scale: 0.8;
+			--icon-rotation: 20;
+			transform: scale(1.05);
+		}
+
+		main button:hover:active:before {
+			box-shadow: 0 2px 12px var(--color-mix);
+		}
+
+		main button:hover:active span:before,
+		main button:hover:active span:after {
+			transition-delay: 0s;
+		}
+
+		main button:hover:active span:nth-child(odd):before,
+		main button:hover:active span:nth-child(even):before {
+			--icon-rotation: -20;
+		}
+
+		main button:hover:active span:nth-child(odd):after,
+		main button:hover:active span:nth-child(even):after {
+			--icon-rotation: 20;
+		}
+
+		main button:hover:active:before {
+			transform: scale(0.95);
+		}
+	</style>
+
+
+
+
+</head>
+
+<body translate="no">
+	<main>
+		<button>
+    <span></span>
+    <span>yağmur</span>
+  </button>
+	</main>
+	 
+</body>
+
+</html>

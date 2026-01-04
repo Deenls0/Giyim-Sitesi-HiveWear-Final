@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<style>
+  		.btn{
+  			color: black; !important;
+  			text-decoration: none !important;
+
+  		}
+  		.btn-hover-color:hover,
+  		.btn-hover-color:focus,
+  		.btn-hover-color:active{
+  			color:teal !important;
+  			text-decoration: none;
+  		}
+        .custom-card {
+            
+            overflow: hidden;
+            box-shadow: 20px 20px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-container {
+
+            height: 550px;
+            overflow: hidden;
+            background-color: #f8f9fa;
+        }
+        
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .card-subtitle {
+          height: 40px;
+            font-size: 14px;
+            color: #666;
+            
+
+        }
+        
+        .card-badge {
+            
+            display: inline-block;
+            padding: 3px 10px;
+            background-color: #6c757d;
+            color: white;
+            
+            font-size: 12px;
+            
+        }
+        
+        .card-body {
+            padding: 20px;
+
+
+        }
+    #button1{
+      margin: 0 0 10px 10px;
+     width: 70px;
+      transition: .5s;
+      height: 40px;
+      border-color: white;
+       border: 2px;
+        border-style: solid;
+         color: white;
+         background-color:black;
+         border-radius: 5px;
+         box-shadow: 10px;
+    }
+    #button1:hover{
+      transition: .5s;
+      background-color: teal;
+      color: black;
+    }
+  	</style>
+    <title >HiveWear Pants</title>
+    <link rel="icon" type="image/png" href="logoreal.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body style="background-image: url(combomombo.png); background-size: 100%; background-repeat: no-repeat; background-attachment: fixed;">
+  	<div class="container-fluid">
+  		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg fixed-top">
+             <div class="container-fluid">
+             	   <img src="logoreal.png" style="width: 60px;height: 60px;">
+                         <a class="navbar-brand" href="E:/DENIZ%20BBDG/deniz/proje.html" style="margin-left: 10px; color: black; font-family: cursive;">HiveWear</a>
+                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>      
+                   <form class="d-flex">    	
+                         <button type="button" class="btn btn-link btn-hover-color ms-3" style="width: 80px; height: 40px;border-color: white; border: 2px; border-style: solid; color: black;">Profil</button>   
+                     <button type="button" class="btn btn-link btn-hover-color ms-3" style="width: 80px; height: 40px;border-color: white; border: 2px; border-style: solid; color: black;">Sepet</button>
+                   </form>
+                 </div>
+             </div>
+        </nav>
+<!--navbarbitis-->
+
+ <div class="row" mx-5 style="margin-top: 100px;">
+ <!--İLK SIRA BASLANGIC-->  
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="kargopant.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" >
+                        <h3 class="card-logo" style="padding-left: 5px;">Kargo Cepli Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">890 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="vintagekumas.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" >
+                        <h3 class="card-logo" style="padding-left: 5px;">Vintage Kumaş Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">999 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          
+
+
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="basicbaggy.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" style="">
+                        <h3 class="card-logo" style="padding-left: 5px;">Basic Baggy Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">680 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+</div>
+
+<div class="row" mx-5 style="margin-top: 100px;">
+ <!--ikinci SIRA BASLANGIC-->  
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="bellastikli.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" >
+                        <h3 class="card-logo" style="padding-left: 5px;">Beli Lastikli Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">790 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="bellastiklibeyaz.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" >
+                        <h3 class="card-logo" style="padding-left: 5px;">Beli Lastikli Beyaz Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">1299 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          
+
+
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="ciftpile.png" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" style="">
+                        <h3 class="card-logo" style="padding-left: 5px;">Çift Pileli Beyaz Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">1099 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+</div>
+
+<div class="row" mx-5 style="margin-top: 100px;">
+ <!--İLK SIRA BASLANGIC-->  
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="ispanyolpaca.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" >
+                        <h3 class="card-logo" style="padding-left: 5px;">İspanyol Paca Beyaz Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">590 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="kadifepant.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" >
+                        <h3 class="card-logo" style="padding-left: 5px;">Kadife Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">889 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          
+
+
+            <div class="col-md-3">
+              <div class="shadow-lg">
+                <div class="custom-card">
+                    <div class="card-img-container">
+                        <img src="ketenpant.jpg" alt="Pantolon Resmi">
+                    </div>
+                    <div class="card-body" style="">
+                        <h3 class="card-logo" style="padding-left: 5px;">Keten Pantolon</h3>
+                        <p class="card-subtitle" style="padding-left: 5px; ">680 ₺</p>
+                       <a href="" > <button id="button1" type="button" id="button1" type="button">+</button> </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+</div>
+
+  	</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
